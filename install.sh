@@ -10,6 +10,14 @@ git submodule init
 git submodule update
 cd ~
 
+# install custom fonts
+
+cd $DOTFILES/fonts
+unzip fantasque-sans-mono.zip -d unzipped
+cp unzipped/OTF/*.otf /Users/$USER/Library/Fonts/
+rm -rf unzipped/
+cd ~
+
 # initialize the symlinks
 
 ln -sfv "$DOTFILES/runcom/.bash_profile" ~
