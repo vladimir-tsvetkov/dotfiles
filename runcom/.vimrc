@@ -11,6 +11,7 @@ Plug 'morhetz/gruvbox'
 Plug 'scrooloose/syntastic'
 Plug 'kien/ctrlp.vim'
 Plug 'bling/vim-airline'
+" Plug 'wincent/command-t'
 
 " Initialize plugin system
 call plug#end()
