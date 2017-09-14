@@ -1,0 +1,53 @@
+" Specify a directory for plugins
+" - For Neovim: ~/.local/share/nvim/plugged
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
+
+" Make sure you use single quotes
+
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdtree'
+Plug 'morhetz/gruvbox'
+Plug 'scrooloose/syntastic'
+Plug 'kien/ctrlp.vim'
+Plug 'bling/vim-airline'
+
+" Initialize plugin system
+call plug#end()
+
+" With a map leader it's possible to do extra key combinations
+" like <leader>w saves the current file
+let mapleader = ","
+
+set encoding=utf8
+
+" Appearance
+set t_Co=256
+set hlsearch
+set number
+set listchars=tab:▸\ ,eol:¬
+syntax on
+
+" Color scheme
+colorscheme gruvbox
+set background=dark
+
+" Indentation
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
+
+" Indicate the end boundary of a change
+set cpoptions+=$
+
+" Disable swapfile and backup
+set nobackup
+set noswapfile
+
+" Toggle NERDTree on F3
+autocmd VimEnter * nmap <F3> :NERDTreeToggle<CR>
+autocmd VimEnter * imap <F3> <Esc>:NERDTreeToggle<CR>a
+let NERDTreeQuitOnOpen=1
+let NERDTreeWinSize=35
+
