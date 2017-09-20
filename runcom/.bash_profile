@@ -50,3 +50,8 @@ export SCM_CHECK=true
 
 # Load Bash It
 source "$BASH_IT"/bash_it.sh
+
+# Load rbenv
+if which rbenv > /dev/null; then
+  eval "$(rbenv init -)";
+fi

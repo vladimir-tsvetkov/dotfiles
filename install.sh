@@ -21,6 +21,19 @@ cd ~
 # install vim-plug
 curl -fLo ~/$DOTFILES/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+# install homebrew package manager
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+bash-it enable completion brew
+
+# install rbenv
+brew install rbenv ruby-build
+
+# install Ruiby through rbenv
+
+rbenv install 2.4.2
+rbenv global 2.4.2
+
 # initialize the symlinks
 
 ln -sfv "$DOTFILES/runcom/.bash_profile" ~
