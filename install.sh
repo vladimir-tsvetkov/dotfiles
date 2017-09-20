@@ -29,10 +29,23 @@ bash-it enable completion brew
 # install rbenv
 brew install rbenv ruby-build
 
+eval "$(rbenv init -)"
+
 # install Ruiby through rbenv
 
 rbenv install 2.4.2
 rbenv global 2.4.2
+
+# install bundler
+
+gem install bundler
+
+# install Jekyll & github-pages
+
+if [ -d ~/Sites/hacker-works ]; then
+  cd ~/Sites/hacker-works
+  bundle install
+fi
 
 # initialize the symlinks
 
