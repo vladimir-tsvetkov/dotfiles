@@ -40,6 +40,8 @@ rbenv global 2.4.2
 
 gem install bundler
 
+bash-it enable completion brew
+
 # install Jekyll & github-pages
 
 if [ -d ~/Sites/hacker-works ]; then
