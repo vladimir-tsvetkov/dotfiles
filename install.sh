@@ -39,7 +39,6 @@ rbenv global 2.4.2
 # install bundler
 
 gem install bundler
-
 bash-it enable completion brew
 
 # install Jekyll & github-pages
@@ -48,6 +47,11 @@ if [ -d ~/Sites/hacker-works ]; then
   cd ~/Sites/hacker-works
   bundle install
 fi
+
+# install git-flow
+
+brew install git-flow-avh
+bash-it enable completion git_flow_avh
 
 # initialize the symlinks
 
