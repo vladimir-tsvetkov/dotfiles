@@ -70,8 +70,13 @@ diskutil umount /Volumes/JDK\ 8\ Update\ 144
 jenv add /Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home
 jenv global oracle64-1.8.0.144
 
-# initialize the symlinks
+# install SBT (Scala):
+brew install scala sbt@1 scalastyle
 
+# install vim 8:
+brew install vim --with-override-system-vi
+
+# initialize the symlinks
 ln -sfv "$DOTFILES/runcom/.bash_profile" ~
 ln -sfv "$DOTFILES/runcom/.vimrc" ~
 ln -sfv "$DOTFILES/runcom/.vim" ~
