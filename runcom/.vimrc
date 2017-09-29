@@ -27,6 +27,7 @@ set t_Co=256
 set hlsearch
 set number
 set listchars=tab:▸\ ,eol:¬
+set cursorline
 syntax on
 
 " Color scheme
