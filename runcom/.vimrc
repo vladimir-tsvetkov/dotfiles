@@ -26,6 +26,7 @@ set encoding=utf8
 set t_Co=256
 set hlsearch
 set number
+set relativenumber
 set listchars=tab:▸\ ,eol:¬
 set cursorline
 syntax on
