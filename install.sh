@@ -70,13 +70,17 @@ diskutil umount /Volumes/JDK\ 8\ Update\ 144
 jenv add /Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home
 jenv global oracle64-1.8.0.144
 
-# install SBT (Scala):
+# install SBT (Scala)
 brew install scala sbt@1 scalastyle
 
 # set SBT options:
 echo '-J-XX:+CMSClassUnloadingEnabled' >> /usr/local/etc/sbtopts
 echo '-J-Xms1G' >> /usr/local/etc/sbtopts
 echo '-J-Xmx2G' >> /usr/local/etc/sbtopts
+
+# install ammonite-repl
+# brew install ammonite-repl
+sudo curl -L -o /usr/local/bin/amm https://git.io/vdNv2 && sudo chmod +x /usr/local/bin/amm
 
 # install vim 8:
 brew install vim --with-override-system-vi
