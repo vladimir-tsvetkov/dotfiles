@@ -54,6 +54,9 @@ autocmd VimEnter * imap <F3> <Esc>:NERDTreeToggle<CR>a
 let NERDTreeQuitOnOpen=1
 let NERDTreeWinSize=35
 
+" Allow backspace over anything in INSERT-mode
+set backspace=indent,eol,start
+
 " syntastic settings
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
