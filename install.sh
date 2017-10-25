@@ -47,7 +47,7 @@ brew install git-flow-avh
 bash-it enable completion git_flow_avh
 
 # install JDK 9
-cd ~/lownloads
+cd ~/Downloads
 http://download.oracle.com/otn-pub/java/jdk/9+181/jdk-9_osx-x64_bin.dmg
 curl -v -j -k -L -H "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/9+181/jdk-9_osx-x64_bin.dmg > jdk-9_osx-x64_bin.dmg
 hdiutil attach jdk-9_osx-x64_bin.dmg
@@ -72,6 +72,11 @@ jenv global oracle64-1.8.0.144
 
 # install SBT (Scala):
 brew install scala sbt@1 scalastyle
+
+# set SBT options:
+echo '-J-XX:+CMSClassUnloadingEnabled' >> /usr/local/etc/sbtopts
+echo '-J-Xms1G' >> /usr/local/etc/sbtopts
+echo '-J-Xmx2G' >> /usr/local/etc/sbtopts
 
 # install vim 8:
 brew install vim --with-override-system-vi
