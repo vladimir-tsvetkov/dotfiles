@@ -85,6 +85,9 @@ sudo curl -L -o /usr/local/bin/amm https://git.io/vdNv2 && sudo chmod +x /usr/lo
 # install vim 8:
 brew install vim --with-override-system-vi
 
+# install maven:
+brew install maven
+
 # initialize the symlinks
 ln -sfv "$DOTFILES/runcom/.bash_profile" ~
 ln -sfv "$DOTFILES/runcom/.vimrc" ~
