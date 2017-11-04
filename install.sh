@@ -78,6 +78,9 @@ echo '-J-XX:+CMSClassUnloadingEnabled' >> /usr/local/etc/sbtopts
 echo '-J-Xms1G' >> /usr/local/etc/sbtopts
 echo '-J-Xmx2G' >> /usr/local/etc/sbtopts
 
+# install typesafe-activator for (Play 2.4)
+brew install typesafe-activator
+
 # install ammonite-repl
 # brew install ammonite-repl
 sudo curl -L -o /usr/local/bin/amm https://git.io/vdNv2 && sudo chmod +x /usr/local/bin/amm
