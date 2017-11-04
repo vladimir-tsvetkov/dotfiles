@@ -91,6 +91,9 @@ brew install vim --with-override-system-vi
 # install maven:
 brew install maven
 
+# make sure maven is using the java version set in jenv
+jenv enable-plugin maven
+
 # initialize the symlinks
 ln -sfv "$DOTFILES/runcom/.bash_profile" ~
 ln -sfv "$DOTFILES/runcom/.vimrc" ~
