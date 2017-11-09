@@ -59,3 +59,6 @@ fi
 if which jenv > /dev/null; then
   eval "$(jenv init -)";
 fi  
+
+# set alias for Typora
+alias typora="open -a typora"
