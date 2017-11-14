@@ -94,6 +94,9 @@ brew install maven
 # make sure maven is using the java version set in jenv
 jenv enable-plugin maven
 
+# install Typora
+brew cask install typora
+
 # initialize the symlinks
 ln -sfv "$DOTFILES/runcom/.bash_profile" ~
 ln -sfv "$DOTFILES/runcom/.vimrc" ~
