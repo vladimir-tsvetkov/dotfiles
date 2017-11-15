@@ -101,3 +101,6 @@ brew cask install typora
 ln -sfv "$DOTFILES/runcom/.bash_profile" ~
 ln -sfv "$DOTFILES/runcom/.vimrc" ~
 ln -sfv "$DOTFILES/runcom/.vim" ~
+
+# initialize the locate database:
+sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
