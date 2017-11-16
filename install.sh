@@ -24,6 +24,8 @@ curl -fLo ~/$DOTFILES/.vim/autoload/plug.vim --create-dirs https://raw.githubuse
 
 bash-it enable completion brew
 
+brew update
+
 # install rbenv
 brew install rbenv ruby-build
 eval "$(rbenv init -)"
@@ -96,6 +98,10 @@ jenv enable-plugin maven
 
 # install Typora
 brew cask install typora
+
+# install NVM
+brew install nvm
+mkdir ~/.nvm
 
 # initialize the symlinks
 ln -sfv "$DOTFILES/runcom/.bash_profile" ~

@@ -70,3 +70,6 @@ export PATH="/usr/local/Cellar/postgresql@9.4/9.4.15/bin:$PATH"
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
+# set NVM directory:
+export NVM_DIR="$HOME/.nvm"
+source $(brew --prefix nvm)/nvm.sh
