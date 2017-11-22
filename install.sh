@@ -92,6 +92,7 @@ brew install vim --with-override-system-vi
 
 # install maven:
 brew install maven
+bash-it enable completion maven
 
 # make sure maven is using the java version set in jenv
 jenv enable-plugin maven
@@ -102,6 +103,7 @@ brew cask install typora
 # install NVM
 brew install nvm
 mkdir ~/.nvm
+bash-it enable completion nvm
 
 # initialize the symlinks
 ln -sfv "$DOTFILES/runcom/.bash_profile" ~
