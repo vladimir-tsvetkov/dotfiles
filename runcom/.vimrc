@@ -71,3 +71,7 @@ let g:syntastic_check_on_wq=0
 let g:syntastic_scala_checkers=['fsc', 'scalac', 'scalastyle']
 let g:syntastic_scala_scalastyle_jar='/usr/local/Cellar/scalastyle/0.8.0/libexec/scalastyle_2.11-0.8.0-batch.jar'
 let g:syntastic_scala_scalastyle_config_file='/usr/local/etc/scalastyle_config.xml' 
+
+" CtrlP configuration
+let g:ctrlp_max_files=0
+let g:ctrlp_max_depth=40
