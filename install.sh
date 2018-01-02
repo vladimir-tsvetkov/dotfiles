@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 # dotfiles installer
 
-export DOTFILES="~/dotfiles"
+export DOTFILES="$HOME/dotfiles"
+
+# install and initialize bash-it
+$DOTFILES/.bash_it/install.sh --interactive
 
 # initialize Git submodules
 cd $DOTFILES
@@ -48,29 +51,34 @@ fi
 brew install git-flow-avh
 bash-it enable completion git_flow_avh
 
-# install JDK 9
-cd ~/Downloads
-http://download.oracle.com/otn-pub/java/jdk/9+181/jdk-9_osx-x64_bin.dmg
-curl -v -j -k -L -H "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/9+181/jdk-9_osx-x64_bin.dmg > jdk-9_osx-x64_bin.dmg
-hdiutil attach jdk-9_osx-x64_bin.dmg
-sudo installer -pkg /Volumes/JDK\ 9/JDK\ 9.pkg -target /
-diskutil umount /Volumes/JDK\ 9
-cd ~
+# install JDK 9 - DEPRECATED WAY
+#cd ~/Downloads
+#http://download.oracle.com/otn-pub/java/jdk/9+181/jdk-9_osx-x64_bin.dmg
+#curl -v -j -k -L -H "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/9+181/jdk-9_osx-x64_bin.dmg > jdk-9_osx-x64_bin.dmg
+#hdiutil attach jdk-9_osx-x64_bin.dmg
+#sudo installer -pkg /Volumes/JDK\ 9/JDK\ 9.pkg -target /
+#diskutil umount /Volumes/JDK\ 9
+#cd ~
 
 # install jenv 
 brew install jenv
 eval "$(jenv init -)";
-jenv global oracle64-9
+#jenv global oracle64-9
 
-# install JDK 8
-cd ~/Downloads
-curl -v -j -k -L -H "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u144-b01/090f390dda5b47b9b721c7dfaa008135/jdk-8u144-macosx-x64.dmg > jdk-8u144-macosx-x64.dmg
-hdiutil attach jdk-8u144-macosx-x64.dmg
-sudo installer -pkg /Volumes/JDK\ 8\ Update\ 144/JDK\ 8\ Update\ 144.pkg -target /
-diskutil umount /Volumes/JDK\ 8\ Update\ 144
+# install JDK 8 - DEPRECATED WAY
+#cd ~/Downloads
+#curl -v -j -k -L -H "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u144-b01/090f390dda5b47b9b721c7dfaa008135/jdk-8u144-macosx-x64.dmg > jdk-8u144-macosx-x64.dmg
+#hdiutil attach jdk-8u144-macosx-x64.dmg
+#sudo installer -pkg /Volumes/JDK\ 8\ Update\ 144/JDK\ 8\ Update\ 144.pkg -target /
+#diskutil umount /Volumes/JDK\ 8\ Update\ 144
 
-jenv add /Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home
-jenv global oracle64-1.8.0.144
+
+# install JDK 8 - 
+brew tap caskroom/versions
+brew cask install java8
+
+jenv add /Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home
+jenv global oracle64-1.8.0.152
 
 # install SBT (Scala)
 brew install scala sbt@1 scalastyle
