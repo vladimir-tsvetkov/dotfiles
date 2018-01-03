@@ -1,5 +1,10 @@
 # dotfiles
 
+If you haven't installed XCode tools before first run:
+
+    sudo softwareupdate -i -a
+    xcode-select --install
+
 Clone `dotfiles` and install them:
 
     cd ~
