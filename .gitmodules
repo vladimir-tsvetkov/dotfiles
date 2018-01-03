@@ -1,6 +1,6 @@
 [submodule ".bash_it"]
 	path = .bash_it
-	url = git@github.com:Bash-it/bash-it.git
+	url = git@github.com:vladimir-tsvetkov/bash-it.git
 [submodule "iterm2-gruvbox"]
 	path = iterm2-gruvbox
 	url = git@github.com:herrbischoff/iterm2-gruvbox.git

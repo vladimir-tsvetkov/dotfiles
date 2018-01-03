@@ -3,14 +3,14 @@
 
 export DOTFILES="$HOME/dotfiles"
 
-# install and initialize bash-it
-$DOTFILES/.bash_it/install.sh --interactive
-
 # initialize Git submodules
 cd $DOTFILES
 git submodule init
 git submodule update
 cd ~
+
+# install and initialize bash-it
+$DOTFILES/.bash_it/install.sh --interactive
 
 # install custom fonts
 cd $DOTFILES/fonts
