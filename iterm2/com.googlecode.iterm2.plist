@@ -380,6 +380,11 @@
 	<false/>
 	<key>NSScrollViewShouldScrollUnderTitlebar</key>
 	<false/>
+	<key>NSSplitView Subview Frames NSColorPanelSplitView</key>
+	<array>
+		<string>0.000000, 0.000000, 224.000000, 263.000000, NO, NO</string>
+		<string>0.000000, 264.000000, 224.000000, 43.000000, NO, NO</string>
+	</array>
 	<key>NSTableView Columns v2 KeyBingingTable</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
@@ -415,11 +420,11 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>551 493 620 392 0 0 1680 1050 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>525 389 796 473 0 0 1680 1050 </string>
+	<string>478 570 796 473 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>961 266 570 402 0 0 1680 1028 </string>
+	<string>961 266 570 402 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>633 543 570 402 0 0 1680 1028 </string>
+	<string>633 562 570 402 0 0 1680 1050 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -699,13 +704,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.25950056314468384</real>
+				<real>0.5</real>
 				<key>Color Space</key>
-				<string>Calibrated</string>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.25949612259864807</real>
+				<real>0.5</real>
 				<key>Red Component</key>
-				<real>0.25950387120246887</real>
+				<real>0.5</real>
 			</dict>
 			<key>Cursor Guide Color</key>
 			<dict>
@@ -1096,26 +1101,26 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.70916998386383057</real>
+				<real>0.20000000000000001</real>
 				<key>Color Space</key>
-				<string>Calibrated</string>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.70916998386383057</real>
+				<real>0.20000000000000001</real>
 				<key>Red Component</key>
-				<real>0.70916998386383057</real>
+				<real>0.20000000000000001</real>
 			</dict>
 			<key>Selection Color</key>
 			<dict>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.18431372940540314</real>
+				<real>0.40000000000000002</real>
 				<key>Color Space</key>
-				<string>Calibrated</string>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.18823529779911041</real>
+				<real>0.40000000000000002</real>
 				<key>Red Component</key>
-				<real>0.19607843458652496</real>
+				<real>0.40000000000000002</real>
 			</dict>
 			<key>Send Code When Idle</key>
 			<false/>
@@ -1159,6 +1164,8 @@
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>5D9C9BA4-CB72-48CC-AB77-B186089CDAE4</string>
+	<key>NoSyncNeverAskAboutSettingAlternateMouseScroll</key>
+	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -1167,6 +1174,8 @@
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>526300188.12382299</real>
+	<key>PMPrintingExpandedStateForPrint2</key>
+	<false/>
 	<key>PasteTabToStringTabStopSize</key>
 	<integer>4</integer>
 	<key>PointerActions</key>
@@ -1204,6 +1213,8 @@
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/vladi/dotfiles/iterm2</string>
+	<key>Print In Black And White</key>
+	<true/>
 	<key>SUAutomaticallyUpdate</key>
 	<true/>
 	<key>SUEnableAutomaticChecks</key>
@@ -1215,7 +1226,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-11-01T12:38:00Z</date>
+	<date>2018-01-04T01:13:29Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>TabStyle</key>
@@ -1225,7 +1236,7 @@
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>iTerm Version</key>
-	<string>3.1.3</string>
+	<string>3.1.5</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>1</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
