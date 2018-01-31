@@ -12,6 +12,7 @@ Plug 'scrooloose/syntastic'
 Plug 'kien/ctrlp.vim'
 Plug 'bling/vim-airline'
 Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-surround'
 " Plug 'wincent/command-t'
 
 " Initialize plugin system
@@ -28,6 +29,7 @@ set t_Co=256
 set hlsearch
 set number
 set relativenumber
+set list
 set listchars=tab:▸\ ,eol:¬
 set cursorline
 syntax on
