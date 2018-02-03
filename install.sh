@@ -95,10 +95,10 @@ brew install typesafe-activator
 # brew install ammonite-repl
 sudo curl -L -o /usr/local/bin/amm https://git.io/vdNv2 && sudo chmod +x /usr/local/bin/amm
 
-# install vim 8:
+# install vim 8
 brew install vim --with-override-system-vi
 
-# install maven:
+# install maven
 brew install maven
 bash-it enable completion maven
 
@@ -112,6 +112,13 @@ brew cask install typora
 brew install nvm
 mkdir ~/.nvm
 bash-it enable completion nvm
+
+# install Coursier
+brew install --HEAD coursier/formulas/coursier
+
+# install scalafmt:
+brew install --HEAD olafurpg/scalafmt/scalafmt
+brew install nailgun
 
 # initialize the symlinks
 ln -sfv "$DOTFILES/runcom/.bash_profile" ~

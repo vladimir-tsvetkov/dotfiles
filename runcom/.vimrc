@@ -13,6 +13,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'bling/vim-airline'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-surround'
+Plug 'Chiel92/vim-autoformat'
 " Plug 'wincent/command-t'
 
 " Initialize plugin system
@@ -74,6 +75,24 @@ let g:syntastic_scala_checkers=['fsc', 'scalac', 'scalastyle']
 let g:syntastic_scala_scalastyle_jar='/usr/local/Cellar/scalastyle/0.8.0/libexec/scalastyle_2.11-0.8.0-batch.jar'
 let g:syntastic_scala_scalastyle_config_file='/usr/local/etc/scalastyle_config.xml' 
 
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+nnoremap <F4> :SyntasticCheck<CR>
+
 " CtrlP configuration
 let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=40
+
+" enable vim-autoformat for Scala
+function! StartNailgunScalafmt()
+    silent execute '!scalafmt_ng 2>/dev/null 1>/dev/null &'
+    sleep 1
+    silent execute '!ng ng-alias scalafmt org.scalafmt.cli.Cli'
+    execute(':redraw!')
+endfunction
+
+call StartNailgunScalafmt()
+
+noremap <F5> :Autoformat<CR>
+"let g:autoformat_verbosemode=1
+let g:formatdef_scalafmt = "'ng scalafmt --stdin'"
+let g:formatters_scala = ['scalafmt']
