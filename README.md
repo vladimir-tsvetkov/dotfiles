@@ -18,6 +18,22 @@ Clone `dotfiles` and install them:
     :source %
     :PlugInstall
 
+## Feb 04, 2018 - `brew doctor` Actions Related to Adding Python3 Support to Vim 
+
+    # link python3
+    sudo mkdir /usr/local/Frameworks
+    sudo chown -R $(whoami) $(brew --prefix)/*
+    brew link python3
+    
+    ls -al /usr/local/include
+    sudo chown -R $(whoami) $(brew --prefix)/*
+    brew link gdbm
+    brew link python
+    brew link libyaml
+    brew link xz
+    brew link ruby
+    brew upgrade vim --with-python3
+
 ## Manual fixes after upgrading to OS X High Sierra
 
 #### Fix git

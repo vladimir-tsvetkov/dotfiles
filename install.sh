@@ -96,7 +96,7 @@ brew install typesafe-activator
 sudo curl -L -o /usr/local/bin/amm https://git.io/vdNv2 && sudo chmod +x /usr/local/bin/amm
 
 # install vim 8
-brew install vim --with-override-system-vi
+brew install vim --with-python3 --with-override-system-vi
 
 # install maven
 brew install maven
@@ -116,13 +116,16 @@ bash-it enable completion nvm
 # install Coursier
 brew install --HEAD coursier/formulas/coursier
 
-# install scalafmt:
+# install scalafmt
 # brew install --HEAD olafurpg/scalafmt/scalafmt
 brew install nailgun
 
 coursier bootstrap --standalone com.geirsson:scalafmt-cli_2.12:1.4.0 \
   -r bintray:scalameta/maven \
   -o /usr/local/bin/scalafmt_ng -f --main com.martiansoftware.nailgun.NGServer
+
+# upgrade vim for python3 support
+brew upgrade vim --with-python3
 
 # initialize the symlinks
 ln -sfv "$DOTFILES/runcom/.bash_profile" ~
