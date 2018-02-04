@@ -34,6 +34,13 @@ Clone `dotfiles` and install them:
     brew link ruby
     brew upgrade vim --with-python3
 
+In vim:
+
+    :PlugInstall
+    :PlugUpgrade
+
+I decided to substitute Synstastic for ALE.
+
 ## Manual fixes after upgrading to OS X High Sierra
 
 #### Fix git

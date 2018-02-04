@@ -8,13 +8,12 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
 Plug 'morhetz/gruvbox'
-Plug 'scrooloose/syntastic'
 Plug 'kien/ctrlp.vim'
 Plug 'bling/vim-airline'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-surround'
 Plug 'Chiel92/vim-autoformat'
-" Plug 'wincent/command-t'
+Plug 'w0rp/ale'
 
 " Initialize plugin system
 call plug#end()
@@ -61,22 +60,19 @@ let NERDTreeWinSize=35
 " Allow backspace over anything in INSERT-mode
 set backspace=indent,eol,start
 
-" syntastic settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list=1
-let g:syntastic_auto_loc_list=1
-let g:syntastic_check_on_open=0
-let g:syntastic_check_on_wq=0
-
-let g:syntastic_scala_checkers=['fsc', 'scalac', 'scalastyle']
-let g:syntastic_scala_scalastyle_jar='/usr/local/Cellar/scalastyle/0.8.0/libexec/scalastyle_2.11-0.8.0-batch.jar'
-let g:syntastic_scala_scalastyle_config_file='/usr/local/etc/scalastyle_config.xml' 
-
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
-nnoremap <F4> :SyntasticCheck<CR>
+" ALE settings
+let g:ale_linters={
+\   'scala': ['fsc', 'scala', 'scalastyle'],
+\   'javascript': ['eslint'],
+\}
+let g:ale_fixers={
+\   'javascript': ['eslint'],
+\}
+let g:ale_sign_error='●'
+let g:ale_sign_warning='●'
+highlight clear ALEErrorSign
+highlight clear ALEWarningSign
+noremap <F4> :ALEFix<CR>  
 
 " CtrlP configuration
 let g:ctrlp_max_files=0
