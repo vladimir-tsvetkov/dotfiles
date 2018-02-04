@@ -126,6 +126,14 @@ coursier bootstrap --standalone com.geirsson:scalafmt-cli_2.12:1.4.0 \
 
 # upgrade vim for python3 support
 brew upgrade vim --with-python3
+brew postinstall python3
+pip3 install neovim
+
+# install tern
+npm install --global tern
+
+# install flow
+npm install --global flow-bin
 
 # initialize the symlinks
 ln -sfv "$DOTFILES/runcom/.bash_profile" ~

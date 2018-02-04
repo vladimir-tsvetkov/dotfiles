@@ -15,6 +15,13 @@ Plug 'tpope/vim-surround'
 Plug 'Chiel92/vim-autoformat'
 Plug 'w0rp/ale'
 
+Plug 'Shougo/deoplete.nvim'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
+
+Plug 'carlitux/deoplete-ternjs'
+Plug 'steelsojka/deoplete-flow'
+
 " Initialize plugin system
 call plug#end()
 
@@ -59,6 +66,13 @@ let NERDTreeWinSize=35
 
 " Allow backspace over anything in INSERT-mode
 set backspace=indent,eol,start
+
+" Use deoplete
+let g:deoplete#sources#ternjs#timeout=1
+let g:deoplete#enable_at_startup=1
+let g:deoplete#sources#ternjs#filetypes=[
+\   'jsx',
+\]
 
 " ALE settings
 let g:ale_linters={
