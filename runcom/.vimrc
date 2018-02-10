@@ -70,9 +70,15 @@ set backspace=indent,eol,start
 " Use deoplete
 let g:deoplete#sources#ternjs#timeout=1
 let g:deoplete#enable_at_startup=1
+let g:deoplete#sources#ternjs#types=1
+" let g:deoplete#sources#ternjs#docs=1
+let g:deoplete#sources#ternjs#include_keywords=1
 let g:deoplete#sources#ternjs#filetypes=[
 \   'jsx',
 \]
+
+" Close preview window on
+" autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
 " ALE settings
 let g:ale_linters={
@@ -92,7 +98,7 @@ noremap <F4> :ALEFix<CR>
 let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=40
 
-" enable vim-autoformat for Scala
+" Enable vim-autoformat for Scala
 function! StartNailgunScalafmt()
     silent execute '!scalafmt_ng 2>/dev/null 1>/dev/null &'
     sleep 1
