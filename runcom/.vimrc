@@ -109,6 +109,7 @@ endfunction
 call StartNailgunScalafmt()
 
 noremap <F5> :Autoformat<CR>
-"let g:autoformat_verbosemode=1
+let g:autoformat_verbosemode=1
 let g:formatdef_scalafmt = "'ng scalafmt --stdin'"
 let g:formatters_scala = ['scalafmt']
+let g:formatters_sbt = ['scalafmt']
