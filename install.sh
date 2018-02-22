@@ -51,27 +51,9 @@ fi
 brew install git-flow-avh
 bash-it enable completion git_flow_avh
 
-# install JDK 9 - DEPRECATED WAY
-#cd ~/Downloads
-#http://download.oracle.com/otn-pub/java/jdk/9+181/jdk-9_osx-x64_bin.dmg
-#curl -v -j -k -L -H "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/9+181/jdk-9_osx-x64_bin.dmg > jdk-9_osx-x64_bin.dmg
-#hdiutil attach jdk-9_osx-x64_bin.dmg
-#sudo installer -pkg /Volumes/JDK\ 9/JDK\ 9.pkg -target /
-#diskutil umount /Volumes/JDK\ 9
-#cd ~
-
 # install jenv 
 brew install jenv
 eval "$(jenv init -)";
-#jenv global oracle64-9
-
-# install JDK 8 - DEPRECATED WAY
-#cd ~/Downloads
-#curl -v -j -k -L -H "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u144-b01/090f390dda5b47b9b721c7dfaa008135/jdk-8u144-macosx-x64.dmg > jdk-8u144-macosx-x64.dmg
-#hdiutil attach jdk-8u144-macosx-x64.dmg
-#sudo installer -pkg /Volumes/JDK\ 8\ Update\ 144/JDK\ 8\ Update\ 144.pkg -target /
-#diskutil umount /Volumes/JDK\ 8\ Update\ 144
-
 
 # install JDK 8 - 
 brew tap caskroom/versions
@@ -92,7 +74,6 @@ echo '-J-Xmx2G' >> /usr/local/etc/sbtopts
 brew install typesafe-activator
 
 # install ammonite-repl
-# brew install ammonite-repl
 sudo curl -L -o /usr/local/bin/amm https://git.io/vdNv2 && sudo chmod +x /usr/local/bin/amm
 
 # install vim 8
@@ -117,7 +98,6 @@ bash-it enable completion nvm
 brew install --HEAD coursier/formulas/coursier
 
 # install scalafmt
-# brew install --HEAD olafurpg/scalafmt/scalafmt
 brew install nailgun
 
 coursier bootstrap --standalone com.geirsson:scalafmt-cli_2.12:1.4.0 \
@@ -134,6 +114,16 @@ npm install --global tern
 
 # install flow
 npm install --global flow-bin
+
+# setup SchemaSpy
+brew install graphviz --with-pango --with-freetype
+
+# echo 'export PATH="/usr/local/opt/icu4c/bin:$PATH"' >> ~/.bash_profile
+# echo 'export PATH="/usr/local/opt/icu4c/sbin:$PATH"' >> ~/.bash_profile
+
+cd ~
+curl -O https://github.com/schemaspy/schemaspy/releases/download/v6.0.0-rc2/schemaspy-6.0.0-rc2.jar
+curl -O https://jdbc.postgresql.org/download/postgresql-42.2.1.jar
 
 # initialize the symlinks
 ln -sfv "$DOTFILES/runcom/.bash_profile" ~
