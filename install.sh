@@ -118,9 +118,6 @@ npm install --global flow-bin
 # setup SchemaSpy
 brew install graphviz --with-pango --with-freetype
 
-# echo 'export PATH="/usr/local/opt/icu4c/bin:$PATH"' >> ~/.bash_profile
-# echo 'export PATH="/usr/local/opt/icu4c/sbin:$PATH"' >> ~/.bash_profile
-
 cd ~
 curl -O https://github.com/schemaspy/schemaspy/releases/download/v6.0.0-rc2/schemaspy-6.0.0-rc2.jar
 curl -O https://jdbc.postgresql.org/download/postgresql-42.2.1.jar
