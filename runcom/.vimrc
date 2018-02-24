@@ -85,6 +85,7 @@ let g:ale_linters={
 \   'scala': ['fsc', 'scala', 'scalastyle'],
 \   'javascript': ['eslint'],
 \}
+let g:ale_scalastyle_config_loc = '/usr/local/etc/scalastyle_config.xml'
 let g:ale_fixers={
 \   'javascript': ['eslint'],
 \}
