@@ -76,6 +76,9 @@ brew install typesafe-activator
 # install ammonite-repl
 sudo curl -L -o /usr/local/bin/amm https://git.io/vdNv2 && sudo chmod +x /usr/local/bin/amm
 
+# install ammonite-repl for Scala 2.11
+sudo curl -L -o /usr/local/bin/amm11 https://git.io/vdNvV && sudo chmod +x /usr/local/bin/amm11
+
 # install vim 8
 brew install vim --with-python3 --with-override-system-vi
 
@@ -121,6 +124,9 @@ brew install graphviz --with-pango --with-freetype
 cd ~
 curl -O https://github.com/schemaspy/schemaspy/releases/download/v6.0.0-rc2/schemaspy-6.0.0-rc2.jar
 curl -O https://jdbc.postgresql.org/download/postgresql-42.2.1.jar
+
+# install Apache Spark
+brew install apache-spark
 
 # initialize the symlinks
 ln -sfv "$DOTFILES/runcom/.bash_profile" ~

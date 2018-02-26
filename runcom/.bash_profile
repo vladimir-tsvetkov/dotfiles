@@ -64,7 +64,7 @@ fi
 alias typora="open -a typora"
 
 # add PostgresSQL to the PATH:
-export PATH="/usr/local/Cellar/postgresql@9.4/9.4.15/bin:$PATH"
+export PATH="/usr/local/Cellar/postgresql@9.4/9.4.16/bin:$PATH"
 
 # set locale explicitly after upgrading to OS X High Sierra:
 export LC_CTYPE=en_US.UTF-8
