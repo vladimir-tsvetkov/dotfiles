@@ -18,6 +18,21 @@ Clone `dotfiles` and install them:
     :source %
     :PlugInstall
 
+## Feb 28, 2018 - Brew Upgrades & Java 9 Cleanup
+
+After installing Cassandra through `brew install cassandra`, I run into startup issues.
+I had to completely remove **Java 9 SDK**:
+
+    sudo rm -fr /Library/Java/JavaVirtualMachines/jdk-9.jdk/
+    sudo rm -fr /Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin
+    sudo rm -fr /Library/PreferencePanes/JavaControlPanel.prefPane
+    jenv remove oracle64-9
+
+To upgrade IntelliJ IDEA & Typora:
+
+    brew cask install --force typora
+    brew cask upgrade --greedy
+
 ## Feb 04, 2018 - `brew doctor` Actions Related to Adding Python3 Support to Vim 
 
     # link python3

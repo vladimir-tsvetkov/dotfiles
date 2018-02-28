@@ -97,6 +97,10 @@ brew install nvm
 mkdir ~/.nvm
 bash-it enable completion nvm
 
+# install PostgreSQL 9.4:
+brew install postgresql@9.4
+brew services start postgresql@9.4
+
 # install Coursier
 brew install --HEAD coursier/formulas/coursier
 
@@ -127,6 +131,10 @@ curl -O https://jdbc.postgresql.org/download/postgresql-42.2.1.jar
 
 # install Apache Spark
 brew install apache-spark
+
+# install Apache Cassandra
+brew install cassandra
+brew services start cassandra
 
 # initialize the symlinks
 ln -sfv "$DOTFILES/runcom/.bash_profile" ~
