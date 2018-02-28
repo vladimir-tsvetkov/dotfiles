@@ -107,10 +107,12 @@ function! StartNailgunScalafmt()
     execute(':redraw!')
 endfunction
 
-call StartNailgunScalafmt()
+" call StartNailgunScalafmt()
 
-noremap <F5> :Autoformat<CR>
+" noremap <F5> :Autoformat<CR>
 " let g:autoformat_verbosemode=1
-let g:formatdef_scalafmt = "'ng scalafmt --stdin'"
-let g:formatters_scala = ['scalafmt']
-let g:formatters_sbt = ['scalafmt']
+" let g:formatdef_scalafmt = "'ng scalafmt --stdin'"
+" let g:formatters_scala = ['scalafmt']
+" let g:formatters_sbt = ['scalafmt']
+
+noremap <F5> !scalafmt -i -f %<CR>
