@@ -28,6 +28,21 @@ I had to completely remove **Java 9 SDK**:
     sudo rm -fr /Library/PreferencePanes/JavaControlPanel.prefPane
     jenv remove oracle64-9
 
+
+Apparently `cqlsh` is broken on Mac OS X. You'll need to comment out line 483 of `/usr/local/Cellar/cassandra/3.11.2/libexec/bin/cqlsh.py`:
+```python
+# no_compact=no_compact,
+```
+
+After the fix, you should be able to run `cqlsh`:
+```bash
+cqlsh
+Connected to Test Cluster at 127.0.0.1:9042.
+[cqlsh 5.0.1 | Cassandra 3.11.2 | CQL spec 3.4.4 | Native protocol v4]
+Use HELP for help.
+cqlsh>
+```
+
 To upgrade IntelliJ IDEA & Typora:
 
     brew cask install --force typora
@@ -93,10 +108,10 @@ Now when using git, e.g. `git pull origin master` results in the following `perl
 ```
 perl: warning: Setting locale failed.
 perl: warning: Please check that your locale settings:
-	LANGUAGE = (unset),
-	LC_ALL = (unset),
-	LC_CTYPE = "UTF-8",
-	LANG = "en_US.UTF-8"
+  LANGUAGE = (unset),
+  LC_ALL = (unset),
+  LC_CTYPE = "UTF-8",
+  LANG = "en_US.UTF-8"
     are supported and installed on your system.
 perl: warning: Falling back to the standard locale ("C").
 ```
