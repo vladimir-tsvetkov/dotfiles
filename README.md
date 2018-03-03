@@ -18,6 +18,12 @@ Clone `dotfiles` and install them:
     :source %
     :PlugInstall
 
+## Mar 02, 2018 - Fix Python 3
+
+After installing VirtualBox through casks `brew cask install virtualbox`, I've lost python3.
+
+    brew upgrade python
+
 ## Feb 28, 2018 - Brew Upgrades & Java 9 Cleanup
 
 After installing Cassandra through `brew install cassandra`, I run into startup issues.

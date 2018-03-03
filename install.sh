@@ -136,6 +136,9 @@ brew install apache-spark
 brew install cassandra
 brew services start cassandra
 
+# install VirtualBox
+brew cask install virtualbox
+
 # initialize the symlinks
 ln -sfv "$DOTFILES/runcom/.bash_profile" ~
 ln -sfv "$DOTFILES/runcom/.vimrc" ~
