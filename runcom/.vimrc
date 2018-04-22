@@ -116,3 +116,6 @@ endfunction
 " let g:formatters_sbt = ['scalafmt']
 
 noremap <F5> !scalafmt -i -f %<CR>
+
+" Deactivate SQL completion on insert mode
+let g:omni_sql_no_default_maps=1
