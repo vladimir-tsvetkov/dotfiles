@@ -33,7 +33,7 @@ brew update
 brew install rbenv ruby-build
 eval "$(rbenv init -)"
 
-# install Ruiby through rbenv
+# install Ruby through rbenv
 rbenv install 2.4.2
 rbenv global 2.4.2
 
