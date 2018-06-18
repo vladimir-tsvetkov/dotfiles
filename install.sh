@@ -139,6 +139,10 @@ brew services start cassandra
 # install VirtualBox
 brew cask install virtualbox
 
+# install mysql
+brew install mysql
+brew services start mysql
+
 # initialize the symlinks
 ln -sfv "$DOTFILES/runcom/.bash_profile" ~
 ln -sfv "$DOTFILES/runcom/.vimrc" ~
