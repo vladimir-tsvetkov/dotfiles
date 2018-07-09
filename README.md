@@ -18,6 +18,13 @@ Clone `dotfiles` and install them:
     :source %
     :PlugInstall
 
+## Jul 09, 2018 - fix deoplete plugin for Vim
+
+After updating the Vim pluging with `:PlugUpdate`, I opened vim and I got this error: `[deoplete] neovim-python 0.2.4+ is required.^@ and deoplete does not function.`
+The following command has been suggested as solution in the [Deoplete issues on GitHub](https://github.com/Shougo/deoplete.nvim/issues/694):
+
+    pip3 install neovim --upgrade
+
 ## Mar 02, 2018 - Fix Python 3
 
 After installing VirtualBox through casks `brew cask install virtualbox`, I've lost python3.
