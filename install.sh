@@ -97,6 +97,8 @@ brew install nvm
 mkdir ~/.nvm
 bash-it enable completion nvm
 
+nvm install lts/carbon
+
 # install PostgreSQL 9.4:
 brew install postgresql@9.4
 brew services start postgresql@9.4
@@ -143,10 +145,17 @@ brew cask install virtualbox
 brew install mysql
 brew services start mysql
 
+# install kubectl - Kubertenes CLI:
+brew install kubernetes-cli
+
+# install MiniKube
+brew cask install minikube 
+
 # initialize the symlinks
 ln -sfv "$DOTFILES/runcom/.bash_profile" ~
 ln -sfv "$DOTFILES/runcom/.vimrc" ~
 ln -sfv "$DOTFILES/runcom/.vim" ~
+ln -sfv "$DOTFILES/runcom/.nvmrc" ~
 
 # initialize the locate database:
 sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
