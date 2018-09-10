@@ -18,6 +18,12 @@ Clone `dotfiles` and install them:
     :source %
     :PlugInstall
 
+## Sep 10, 2018 - fix default Node version loaded by nvm
+
+After installing `lts/carbon` I had to change the default version chosen by `nvm`:
+
+    nvm alias default lts/carbon
+
 ## Jul 09, 2018 - fix deoplete plugin for Vim
 
 After updating the Vim pluging with `:PlugUpdate`, I opened vim and I got this error: `[deoplete] neovim-python 0.2.4+ is required.^@ and deoplete does not function.`
