@@ -151,6 +151,14 @@ brew install kubernetes-cli
 # install MiniKube
 brew cask install minikube 
 
+# install latest version of bash
+brew install bash
+
+sudo -s
+echo /usr/local/bin/bash >> /etc/shells
+chsh -s /usr/local/bin/bash
+sudo chsh -s /usr/local/bin/bash
+
 # initialize the symlinks
 ln -sfv "$DOTFILES/runcom/.bash_profile" ~
 ln -sfv "$DOTFILES/runcom/.vimrc" ~

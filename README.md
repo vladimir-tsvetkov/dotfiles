@@ -18,6 +18,24 @@ Clone `dotfiles` and install them:
     :source %
     :PlugInstall
 
+## Sep 11, 2018 - update to use latest version of Bash
+
+First, install the latest bash:
+
+    brew install bash
+
+Then, to be able to use the new bash, add it to the list of available shells in `/etc/shells`:
+
+    sudo vim /etc/shells
+
+There add the following path on top `/usr/local/bin/bash`.
+
+And last change the shell with:
+
+    chsh -s /usr/local/bin/bash
+
+... open a new terminal to test the shell.
+
 ## Sep 10, 2018 - fix default Node version loaded by nvm
 
 After installing `lts/carbon` I had to change the default version chosen by `nvm`:
