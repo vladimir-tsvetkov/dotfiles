@@ -146,13 +146,24 @@ brew install mysql
 brew services start mysql
 
 # install kubectl - Kubertenes CLI:
-brew install kubernetes-cli
+ brew install kubernetes-cli
+
+# # or alternatively:
+# curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-215.0.0-darwin-x86_64.tar.gz
+# tar -xvzf google-cloud-sdk-215.0.0-darwin-x86_64.tar.gz
+# ./google-cloud-sdk/install.sh
+
+# # and after restarting the shell run:
+# gcloud components install kubectl
 
 # install MiniKube
 brew cask install minikube 
 
 # install latest version of bash
 brew install bash
+
+# install watchman for npm
+brew install watchman
 
 sudo -s
 echo /usr/local/bin/bash >> /etc/shells
