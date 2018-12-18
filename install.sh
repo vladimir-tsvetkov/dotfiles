@@ -83,7 +83,7 @@ sudo curl -L -o /usr/local/bin/amm11 https://git.io/vdNvV && sudo chmod +x /usr/
 brew install vim --with-python3 --with-override-system-vi
 
 # install maven
-brew install maven
+brew install maven@3.6
 bash-it enable completion maven
 
 # make sure maven is using the java version set in jenv
@@ -153,7 +153,7 @@ brew services start mysql
 # tar -xvzf google-cloud-sdk-215.0.0-darwin-x86_64.tar.gz
 # ./google-cloud-sdk/install.sh
 
-# # and after restarting the shell run:
+# # and after restarting the shell run
 # gcloud components install kubectl
 
 # install MiniKube
@@ -164,6 +164,19 @@ brew install bash
 
 # install watchman for npm
 brew install watchman
+
+# install port scanning tool
+brew install nmap
+
+# cmake is needed fof building nd4j for Scailyte
+brew install cmake
+brew install gcc5
+ln -s /usr/local/bin/gcc-5 /usr/local/bin/gcc
+ln -s /usr/local/bin/g++-5 /usr/local/bin/g++
+hash -r
+
+# install OpenVPN
+
 
 sudo -s
 echo /usr/local/bin/bash >> /etc/shells

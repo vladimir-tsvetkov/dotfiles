@@ -18,6 +18,26 @@ Clone `dotfiles` and install them:
     :source %
     :PlugInstall
 
+## Dec 18, 2018 - Install C Standard Headers
+
+After Mojave updates, running `xcode-select --install` is a partial solution
+In addition, you need to:
+
+    open /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg
+
+Solution explained in [Can't compile C program on a Mac after upgrade to Mojave](https://stackoverflow.com/questions/52509602/cant-compile-c-program-on-a-mac-after-upgrade-to-mojave)
+
+## Nov 21, 2018 - Make `cmake` and `gcc` run
+
+
+Install, once again the command line tools from Apple:
+
+    xcode-select --install
+
+Then install the real `gcc` as the Apple's version is using `clang`:
+
+    brew install gcc
+
 ## Sep 11, 2018 - update to use latest version of Bash
 
 First, install the latest bash:
