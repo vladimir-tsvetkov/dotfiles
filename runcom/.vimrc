@@ -20,7 +20,8 @@ Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
 
 Plug 'carlitux/deoplete-ternjs'
-Plug 'steelsojka/deoplete-flow'
+
+Plug 'flowtype/vim-flow'
 
 " Initialize plugin system
 call plug#end()
@@ -71,7 +72,7 @@ set backspace=indent,eol,start
 let g:deoplete#sources#ternjs#timeout=1
 let g:deoplete#enable_at_startup=1
 let g:deoplete#sources#ternjs#types=1
-" let g:deoplete#sources#ternjs#docs=1
+let g:deoplete#sources#ternjs#docs=0
 let g:deoplete#sources#ternjs#include_keywords=1
 let g:deoplete#sources#ternjs#filetypes=[
 \   'jsx',
@@ -83,7 +84,7 @@ let g:deoplete#sources#ternjs#filetypes=[
 " ALE settings
 let g:ale_linters={
 \   'scala': ['fsc', 'scala', 'scalastyle'],
-\   'javascript': ['eslint'],
+\   'javascript': ['eslint', 'flow'],
 \}
 let g:ale_scalastyle_config_loc = '/usr/local/etc/scalastyle_config.xml'
 let g:ale_fixers={
@@ -100,12 +101,12 @@ let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=40
 
 " Enable vim-autoformat for Scala
-function! StartNailgunScalafmt()
-    silent execute '!scalafmt_ng 2>/dev/null 1>/dev/null &'
-    sleep 1
-    silent execute '!ng ng-alias scalafmt org.scalafmt.cli.Cli'
-    execute(':redraw!')
-endfunction
+" function! StartNailgunScalafmt()
+"     silent execute '!scalafmt_ng 2>/dev/null 1>/dev/null &'
+"     sleep 1
+"     silent execute '!ng ng-alias scalafmt org.scalafmt.cli.Cli'
+"     execute(':redraw!')
+" endfunction
 
 " call StartNailgunScalafmt()
 
