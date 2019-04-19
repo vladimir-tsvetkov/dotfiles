@@ -145,10 +145,10 @@ brew cask install virtualbox
 brew install mysql
 brew services start mysql
 
-# install kubectl - Kubertenes CLI:
- brew install kubernetes-cli
+# install kubectl - Kubertenes CLI
+brew install kubernetes-cli
 
-# # or alternatively:
+# # or alternatively
 # curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-215.0.0-darwin-x86_64.tar.gz
 # tar -xvzf google-cloud-sdk-215.0.0-darwin-x86_64.tar.gz
 # ./google-cloud-sdk/install.sh
@@ -175,8 +175,16 @@ ln -s /usr/local/bin/gcc-5 /usr/local/bin/gcc
 ln -s /usr/local/bin/g++-5 /usr/local/bin/g++
 hash -r
 
-# install OpenVPN
+# install docker
+brew install docker docker-compose docker-machine
+brew cask install docker
 
+# to start docker
+#     open --background -a Docker
+# to fix vim after installing docker, repeat:
+#     brew upgrade vim --with-python3
+#     brew postinstall python3
+#     pip3 install neovim
 
 sudo -s
 echo /usr/local/bin/bash >> /etc/shells
@@ -189,5 +197,5 @@ ln -sfv "$DOTFILES/runcom/.vimrc" ~
 ln -sfv "$DOTFILES/runcom/.vim" ~
 ln -sfv "$DOTFILES/runcom/.nvmrc" ~
 
-# initialize the locate database:
+# initialize the locate database
 sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
