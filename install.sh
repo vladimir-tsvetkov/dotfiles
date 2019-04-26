@@ -186,6 +186,8 @@ brew cask install docker
 #     brew postinstall python3
 #     pip3 install neovim
 
+brew install tig
+
 sudo -s
 echo /usr/local/bin/bash >> /etc/shells
 chsh -s /usr/local/bin/bash
