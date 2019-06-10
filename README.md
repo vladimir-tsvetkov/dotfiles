@@ -18,6 +18,20 @@ Clone `dotfiles` and install them:
     :source %
     :PlugInstall
 
+## Jun 10, 2019 - Update Ruby & Run hacker.works Site Locally
+
+Installing latest stable Ruby:
+
+    rbenv install 2.6.2
+    rbenv global 2.6.2
+
+Run hacker.works jekyll:
+
+    cd ~/Sites/hacker-works/
+    bundle install
+    jekyll build
+    jekyll serve
+
 ## Dec 18, 2018 - Install C Standard Headers
 
 After Mojave updates, running `xcode-select --install` is a partial solution
