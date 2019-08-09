@@ -55,12 +55,20 @@ bash-it enable completion git_flow_avh
 brew install jenv
 eval "$(jenv init -)";
 
-# install JDK 8 - 
+# install JDK 8
 brew tap caskroom/versions
 brew cask install java8
 
 jenv add /Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home
 jenv global oracle64-1.8.0.152
+
+# install AdoptOpenJDK11
+brew tap adoptopenjdk/openjdk
+brew cask install adoptopenjdk11
+
+jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home/
+jenv global 11.0
+
 
 # install SBT (Scala)
 brew install scala sbt@1 scalastyle
