@@ -70,6 +70,9 @@ export PATH="/usr/local/opt/libpq/bin:$PATH"
 # add Python (pip3) packages to the PATH:
 export PATH="~/Library/Python/3.7/bin:$PATH"
 
+# enable the C system headers:
+export CPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/
+
 # set locale explicitly after upgrading to OS X High Sierra:
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
