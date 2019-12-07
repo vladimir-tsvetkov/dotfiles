@@ -71,7 +71,9 @@ export PATH="/usr/local/opt/libpq/bin:$PATH"
 export PATH="~/Library/Python/3.7/bin:$PATH"
 
 # enable the C system headers:
-export CPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/
+# export CPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/
+# the default option above to 10.15 doesn't work when making the binutils
+export CPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include/
 
 # set locale explicitly after upgrading to OS X High Sierra:
 export LC_CTYPE=en_US.UTF-8

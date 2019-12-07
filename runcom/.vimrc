@@ -96,6 +96,9 @@ highlight clear ALEErrorSign
 highlight clear ALEWarningSign
 noremap <F4> :ALEFix<CR>  
 
+let g:ale_c_gcc_options='-std=c11 -Wall'
+let g:ale_c_clang_options='-std=c11 -Wall -Wno-nullability-completeness'
+
 " CtrlP configuration
 let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=40
