@@ -98,6 +98,7 @@ noremap <F4> :ALEFix<CR>
 
 let g:ale_c_gcc_options='-std=c11 -Wall'
 let g:ale_c_clang_options='-std=c11 -Wall -Wno-nullability-completeness'
+let g:ale_asm_gcc_executable='powerpc-elf-gcc'
 
 " CtrlP configuration
 let g:ctrlp_max_files=0

@@ -178,9 +178,9 @@ brew install nmap
 
 # cmake is needed fof building nd4j for Scailyte
 brew install cmake
-brew install gcc5
-ln -s /usr/local/bin/gcc-5 /usr/local/bin/gcc
-ln -s /usr/local/bin/g++-5 /usr/local/bin/g++
+brew install gcc
+ln -s /usr/local/bin/gcc-9 /usr/local/bin/gcc
+ln -s /usr/local/bin/g++-9 /usr/local/bin/g++
 hash -r
 
 # install docker
