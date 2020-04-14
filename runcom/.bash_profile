@@ -74,6 +74,14 @@ export PATH="~/Library/Python/3.7/bin:$PATH"
 # export CPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/
 # export CPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include
 
+export PATH="/opt/cross/arm-none-eabi/bin:$PATH"
+
+# qemu-related settings:
+export PATH="/usr/local/opt/ncurses/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/ncurses/lib"
+export CPPFLAGS="-I/usr/local/opt/ncurses/include"
+export PKG_CONFIG_PATH="/usr/local/opt/ncurses/lib/pkgconfig"
+
 # set locale explicitly after upgrading to OS X High Sierra:
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8

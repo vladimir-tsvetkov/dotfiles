@@ -23,6 +23,9 @@ Plug 'carlitux/deoplete-ternjs'
 
 Plug 'flowtype/vim-flow'
 
+Plug 'leafgarland/typescript-vim'
+Plug 'ianks/vim-tsx'
+
 " Initialize plugin system
 call plug#end()
 
@@ -82,23 +85,26 @@ let g:deoplete#sources#ternjs#filetypes=[
 " autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
 " ALE settings
+" \   'scala': ['fsc', 'scala', 'scalastyle'],
 let g:ale_linters={
-\   'scala': ['fsc', 'scala', 'scalastyle'],
 \   'javascript': ['eslint', 'flow'],
+\   'typescript': ['tsserver', 'tslint', 'eslint'],
 \}
-let g:ale_scalastyle_config_loc = '/usr/local/etc/scalastyle_config.xml'
+" let g:ale_scalastyle_config_loc = '/usr/local/etc/scalastyle_config.xml'
 let g:ale_fixers={
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['eslint'],
+\   'typescript': ['prettier'],
 \}
 let g:ale_sign_error='●'
-let g:ale_sign_warning='●'
+let g:ale_sign_warning='▲'
 highlight clear ALEErrorSign
 highlight clear ALEWarningSign
 noremap <F4> :ALEFix<CR>  
 
-let g:ale_c_gcc_options='-std=c11 -Wall'
-let g:ale_c_clang_options='-std=c11 -Wall -Wno-nullability-completeness'
-let g:ale_asm_gcc_executable='powerpc-elf-gcc'
+let g:ale_c_gcc_options='-std=gnu99 -Wall -Wextra'
+let g:ale_c_clang_options='-std=gnu99 -Wall -Wextra'
+let g:ale_asm_gcc_executable='arm-none-eabi-gcc'
 
 " CtrlP configuration
 let g:ctrlp_max_files=0
@@ -120,7 +126,7 @@ let g:ctrlp_max_depth=40
 " let g:formatters_scala = ['scalafmt']
 " let g:formatters_sbt = ['scalafmt']
 
-noremap <F5> !scalafmt -i -f %<CR>
+" noremap <F5> !scalafmt -i -f %<CR>
 
 " Deactivate SQL completion on insert mode
 let g:omni_sql_no_default_maps=1
