@@ -142,6 +142,12 @@ inoremap <M-k> <Esc>:m .-2<CR>==gi
 vnoremap <M-j> :m '>+1<CR>gv=gv
 vnoremap <M-k> :m '<-2<CR>gv=gv
 
+" typescript IDE-like features
+let g:tsuquyomi_completion_detail=1
+autocmd FileType typescript setlocal completeopt+=menu
+autocmd FileType typescript setlocal completeopt-=preview
+autocmd FileType typescript nmap <buffer> <Leader>t : <C-u>echo tsuquyomi#hint()<CR>
+
 " enable reading .vimrc files in project directories
 set exrc
 set secure
