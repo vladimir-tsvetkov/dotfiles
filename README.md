@@ -18,6 +18,20 @@ Clone `dotfiles` and install them:
     :source %
     :PlugInstall
 
+## Apr 15, 2020 - Reinstall Command Line Tools
+
+Chech the installation path:
+
+    xcode-select --print-path
+
+Delete the existing installation:
+
+    sudo rm -r -f /Library/Developer/CommandLineTools
+
+Reinstall the tools:
+
+    xcode-select --install
+
 ## Jun 10, 2019 - Update Ruby & Run hacker.works Site Locally
 
 Installing latest stable Ruby:
