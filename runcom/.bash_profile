@@ -90,6 +90,10 @@ export LC_ALL=en_US.UTF-8
 export NVM_DIR="$HOME/.nvm"
 source $(brew --prefix nvm)/nvm.sh
 
+# gpg: set appropriate ioctl for device
+GPG_TTY=$(tty)
+export GPG_TTY
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/vladi/google-cloud-sdk/path.bash.inc' ]; then source '/Users/vladi/google-cloud-sdk/path.bash.inc'; fi
 
