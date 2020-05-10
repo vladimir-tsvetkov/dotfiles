@@ -196,6 +196,10 @@ brew cask install docker
 
 brew install tig
 
+brew install gnupg
+# gpg --gen-key
+# gpg --keyserver hkp://pgp.ocf.berkeley.edu --send-keys 20B4610B950641CCCB6644D4D740DF0EAAFF4BBD
+
 sudo -s
 echo /usr/local/bin/bash >> /etc/shells
 chsh -s /usr/local/bin/bash
