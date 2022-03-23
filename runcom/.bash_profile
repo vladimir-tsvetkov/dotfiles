@@ -68,7 +68,8 @@ export PATH="/usr/local/Cellar/postgresql@9.4/9.4.16/bin:$PATH"
 export PATH="/usr/local/opt/libpq/bin:$PATH"
 
 # add Python (pip3) packages to the PATH:
-export PATH="~/Library/Python/3.7/bin:$PATH"
+alias python=/usr/local/bin/python3
+alias pip=/usr/local/bin/pip3
 
 # enable the C system headers:
 # export CPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/
@@ -99,3 +100,6 @@ if [ -f '/Users/vladi/google-cloud-sdk/path.bash.inc' ]; then source '/Users/vla
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/vladi/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/vladi/google-cloud-sdk/completion.bash.inc'; fi
+
+# heroku autocomplete setup
+HEROKU_AC_BASH_SETUP_PATH=/Users/vladi/Library/Caches/heroku/autocomplete/bash_setup && test -f $HEROKU_AC_BASH_SETUP_PATH && source $HEROKU_AC_BASH_SETUP_PATH;
