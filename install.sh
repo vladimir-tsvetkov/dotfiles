@@ -213,3 +213,6 @@ ln -sfv "$DOTFILES/runcom/.nvmrc" ~
 
 # initialize the locate database
 sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
+
+brew install fzf
+/usr/local/opt/fzf/install
