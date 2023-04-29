@@ -10,7 +10,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'morhetz/gruvbox'
 Plug 'kien/ctrlp.vim'
 Plug 'bling/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-surround'
 Plug 'Chiel92/vim-autoformat'
@@ -52,15 +51,15 @@ syntax on
 let g:airline#themes#gruvbox#palette = {}
 
 " Color scheme
-if exists("$COLORFGBG") && !empty("$COLORFGBG")
-  colorscheme gruvbox
-  set background=dark
-else 
+if (!exists("$COLORFGBG") || getenv("ITERM_PROFILE") == "Light")
   set background=light
   let g:airline_theme='silver'
   highlight VertSplit cterm=NONE
   set fillchars+=vert:\▏
-  highlight SignColumn cterm=NONE
+  highlight SignColumn ctermbg=NONE
+else
+  colorscheme gruvbox
+  set background=dark
 endif
 
 " Indentation
