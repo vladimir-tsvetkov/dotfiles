@@ -10,6 +10,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'morhetz/gruvbox'
 Plug 'kien/ctrlp.vim'
 Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-surround'
 Plug 'Chiel92/vim-autoformat'
@@ -48,12 +49,18 @@ set listchars=tab:▸\ ,eol:¬
 set cursorline
 syntax on
 
+let g:airline#themes#gruvbox#palette = {}
+
 " Color scheme
 if exists("$COLORFGBG") && !empty("$COLORFGBG")
   colorscheme gruvbox
   set background=dark
 else 
   set background=light
+  let g:airline_theme='silver'
+  highlight VertSplit cterm=NONE
+  set fillchars+=vert:\▏
+  highlight SignColumn cterm=NONE
 endif
 
 " Indentation
@@ -99,9 +106,8 @@ let g:ale_linters={
 \}
 " let g:ale_scalastyle_config_loc = '/usr/local/etc/scalastyle_config.xml'
 let g:ale_fixers={
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'javascript': ['eslint'],
-\   'typescript': ['prettier'],
+\   'javascript': ['eslint', 'remove_trailing_lines', 'trim_whitespace'],
+\   'typescript': ['prettier', 'remove_trailing_lines', 'trim_whitespace'],
 \}
 let g:ale_sign_error='●'
 let g:ale_sign_warning='▲'
