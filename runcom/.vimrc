@@ -49,8 +49,12 @@ set cursorline
 syntax on
 
 " Color scheme
-colorscheme gruvbox
-set background=dark
+if exists("$COLORFGBG") && !empty("$COLORFGBG")
+  colorscheme gruvbox
+  set background=dark
+else 
+  set background=light
+endif
 
 " Indentation
 set tabstop=2

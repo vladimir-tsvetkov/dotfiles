@@ -103,3 +103,5 @@ if [ -f '/Users/vladi/google-cloud-sdk/completion.bash.inc' ]; then source '/Use
 
 # heroku autocomplete setup
 HEROKU_AC_BASH_SETUP_PATH=/Users/vladi/Library/Caches/heroku/autocomplete/bash_setup && test -f $HEROKU_AC_BASH_SETUP_PATH && source $HEROKU_AC_BASH_SETUP_PATH;
+
+# source  '/Users/vladi/dotfiles/gruvbox/gruvbox_256palette.sh'
