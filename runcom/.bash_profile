@@ -107,3 +107,10 @@ HEROKU_AC_BASH_SETUP_PATH=/Users/vladi/Library/Caches/heroku/autocomplete/bash_s
 # source  '/Users/vladi/dotfiles/gruvbox/gruvbox_256palette.sh'
 
 source ~/dotfiles/runcom/.fzf.bash
+
+# use pyenv:
+export PATH="~/.pyenv/shims:${PATH}"
+pyenv local 3.9.16
+
+# use Homebrew python as system python:
+# export PATH="/usr/local/opt/python/libexec/bin:$PATH"
